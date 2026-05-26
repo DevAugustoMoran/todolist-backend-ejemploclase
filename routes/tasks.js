@@ -36,7 +36,7 @@ const db = req.db;
     }
 });
 
-router.post('/addGoal', async function(req, res, next) {
+router.post('/addTask', async function(req, res, next) {
         const db = req.db;
     if(req.body && req.body.name && req.body.description && req.body.duedate){
 
@@ -101,7 +101,7 @@ router.post('/addGoal', async function(req, res, next) {
 
 });
 
-router.delete('/removeGoal/:id', async function(req, res, next) {
+router.delete('/removeTask/:id', async function(req, res, next) {
         const db = req.db;
     if(req.params && req.params.id){
 
