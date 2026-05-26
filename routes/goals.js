@@ -47,6 +47,7 @@ router.post('/addGoal', async function(req, res, next) {
             // MONGODB
             if (DATABASE === 'MONGODB') {
 
+                delete req.body._id;
                 let goal = new GoalSchema(req.body);
 
                 let response = await goal.save();

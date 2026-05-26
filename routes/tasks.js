@@ -47,6 +47,7 @@ router.post('/addTask', async function(req, res, next) {
             // MONGODB
             if (DATABASE === 'MONGODB') {
 
+                delete req.body._id;
                 let task = new TaskSchema(req.body);
 
                 let response = await task.save();
